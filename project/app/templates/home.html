@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block contant %}
+
+<center><form action="{% url 'insert' %}" method="post" style="padding: 50px;">
+    {% csrf_token %}
+<div >
+    <input type="text" placeholder="fname" style="margin: 20px; border-radius: 20px;" name="fname"><br>
+    <input type="text" placeholder="lname" required style="margin: 20px; border-radius: 20px;" name="lname"><br>
+    <!-- <input type="text" placeholder="Email" required style="margin: 20px; border-radius: 20px;"><br>
+    <input type="text" placeholder="pass" required style="margin: 20px; border-radius: 20px;"><br>
+    <input type="password" placeholder="cpass" required style="margin: 20px; border-radius: 20px;"><br> -->
+    <button type="submit">Submit</button>
+</div>
+</form>
+</center>
+
+{% endblock %}
